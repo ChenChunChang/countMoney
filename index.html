@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title>快来数钱</title>
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+
+<body>
+    <!-- 页面加载的进度 -->
+    <div class="onload-wrap">
+        <div class="loading">0%</div>
+    </div>
+    <!-- 加载完页面后面的游戏内容 -->
+    <div class="wrap">
+        <!-- 第一个页面主页面 -->
+        <div class="first">
+            <div class="txtAnimate">
+                <img src="images/tiaozhan.png" alt="挑战" class="animated bounceIn">
+                <img src="images/yinqu.png" alt="你的数钱速度" class="animated swing" />
+                <img src="images/shou.png" alt="手指滑动" class="animated fadeIn" />
+                <img src="images/p1_btns_wrap.png" alt="" />
+                <div class="btnAnimate">
+                    <img src="images/start_game.png" class="animated pulse" id="start" alt="开始游戏" />
+                    <img src="images/ranking.png" id="rank" alt="数钱" />
+                    <img src="images/activity_rule.png" id="rule" alt="规则" />
+                    <img src="images/prize.png" id="prize" alt="奖品" />
+                    <img src="images/shiyong.png" id="state" alt="说明" />
+                </div>
+            </div>
+            <div class="messDiv">
+                <div class="messOne" style="display: none;">
+                    <img src="images/close.png" style="width:6%;position: absolute;left:80%;top:13%;" class="closeX" />
+                    <div class="info">
+                        <input type="text" name="name" placeholder="姓名" />
+                        <input type="text" name="tel" placeholder="电话" />
+                        <input type="button" name="sub" value="提交并开始游戏" />
+                        <p class="textT"></p>
+                    </div>
+                </div>
+                <div class="messTwo" style="display: none;">
+                    <img src="images/close.png" style="width:6%;position: absolute;left:80%;top:13%;" class="closeX" />
+                    <div class="ranking">
+                        <ul class="rankScore">
+                            <li>
+                                <span class="rank"><img src="images/p1_first.png"></span>
+                                <img src="images/shizhong.png" class="time_img">
+                                <span class="user_name">聪明的小明</span>
+                                <span class="point">800分</span>
+                            </li>
+                            <li>
+                                <span class="rank"><img src="images/p1_second.png"></span>
+                                <img src="images/shizhong.png" class="time_img">
+                                <span class="user_name">聪明的小明</span>
+                                <span class="point">800分</span>
+                            </li>
+                            <li>
+                                <span class="rank"><img src="images/p1_third.png"></span>
+                                <img src="images/shizhong.png" class="time_img">
+                                <span class="user_name">聪明的小明</span>
+                                <span class="point">800分</span>
+                            </li>
+                            <li>
+                                <span class="rank">4</span>
+                                <img src="images/shizhong.png" class="time_img">
+                                <span class="user_name">聪明的小明</span>
+                                <span class="point">800分</span>
+                            </li>
+                            <li>
+                                <span class="rank">5</span>
+                                <img src="images/shizhong.png" class="time_img">
+                                <span class="user_name">聪明的小明</span>
+                                <span class="point">800分</span>
+                            </li>
+                            <li>
+                                <span class="rank">6</span>
+                                <img src="images/shizhong.png" class="time_img">
+                                <span class="user_name">聪明的小明</span>
+                                <span class="point">800分</span>
+                            </li>
+                            <li>
+                                <span class="rank">7</span>
+                                <img src="images/shizhong.png" class="time_img">
+                                <span class="user_name">聪明的小明</span>
+                                <span class="point">800分</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="messThree" style="display: none;">
+                    <img src="images/close.png" style="width:6%;position: absolute;left:80%;top:13%;" class="closeX" />
+                    <div class="rule">
+                        <center>
+                            <h2>活动规则</h2></center>
+                        <p>1、每人有多次游戏机会，但成绩只能提交一次，且提交之后不能更改！
+                            <br> 2、提交成绩时要提供姓名及手机号码作为兑奖凭证，因用户本人未在规定时间内提供正确的手机号码造成的奖品损失，由用户个人承担。
+                            <br> 3、活动时间为2016年5月11日-5月19日24:00，活动结束后将在“雾灵山庄”微信公布中奖名单。
+                            <br> 4、获奖规则：系统将根据大家提交的成绩，按照由多到少的规则进行排行，排名第1的网友将获得一等奖，排名第2-第21位的网友将分获二等奖，以此类推。
+                            <br> 5、奖品的发放：活动结束后，将由工作人员与您取得联系，并将相应的卡券编号发送到您提供的手机号码上。
+                        </p>
+                    </div>
+                </div>
+                <div class="messFour" style="display: none;">
+                    <img src="images/close.png" style="width:6%;position: absolute;left:80%;top:13%;" class="closeX" />
+                    <div class="prize">
+                        <center>
+                            <h2>活动奖品</h2></center>
+                        <p>一等奖
+                            <mark>1人</mark>价值1488元7号楼1晚豪华标间免费房券1张，并可享康体项目3折优惠；</p>
+                        <p>二等奖
+                            <mark>20人</mark>：100元订房代金券每人1张，并可享康体项目4折优惠；</p>
+                        <p>三等奖
+                            <mark>50人</mark>：50元订房代金券每人1张，并可享康体项目5折优惠。</p>
+                        <p>奖品的有效期：2016年5月20日至6月15日（周五、周六及法定节假日不可用）</p>
+                    </div>
+                </div>
+                <div class="messFive" style="display: none;">
+                    <img src="images/close.png" style="width:6%;position: absolute;left:80%;top:13%;" class="closeX" />
+                    <div class="state">
+                        <center>
+                            <h2>奖券使用说明</h2></center>
+                        <p>1、奖品的使用：请务必至少提前一周致电010-81027788或81027799进行预约，并于入住时向前台服务人员出示您手机上收到的卡券编号即可使用（需同时验证获奖人姓名与手机号码）。
+                            <br> 2、代金券仅适用于线下门市价入住客房消费使用，不适用于通过携程或微信等其他线上渠道预定使用。
+                            <br> 3、免费房安排的房间将视当时酒店排房情况而定，如您所预约的时段预订已满，将与您协商调整入住时间。
+                            <br> 4、免费房券及代金券不得用于除订房外其他产品消费，不得与酒店其他优惠折扣或礼券同时使用，且不予退换、兑换现金或找赎。
+                            <br> 5、对于恶意刷奖者和作弊者，主办方有权取消其兑奖资格。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 第二个页面数钱页面 -->
+        <div class="two" style="display: none;">
+            <div class="imgConver">
+                <img src="images/p2_txt1.png" alt="图片" class="boxmess" />
+            </div>
+            <div class="timeScore">
+                <p class="span1">0</p>
+                <p class="span2">0</p>
+                <p class="span3">0</p>
+                <p class="span4">60</p>
+            </div>
+            <div class="mon">
+                <img src="images/p2_qian.jpg" class="monS" />
+                <!--<img src="images/p2_qian.jpg" class="monS"/>
+                <img src="images/p2_qian.jpg" class="monS"/>
+                <img src="images/p2_qian.jpg" class="monS"/>-->
+            </div>
+            <div class="st">
+                <img src="images/p2_zhuan.png" class="stop" alt="墙壁" />
+                <img src="images/p2_shou.png" class="animated fadeOutUp" id="hint" />
+            </div>
+        </div>
+        <!-- 第三个页面数钱成就页面 -->
+        <div class="three" style="display: none;">
+            <div class="endMess">
+                <img src="images/p3_acquire.png" alt="图片" class="GX" />
+                <h2>￥1</h2>
+                <p>aa</p>
+                <div class="result">我的辉煌战绩:￥<span id="highScore">997</span> 当前排名：<span id="result_rank">66</span>位</div>
+            </div>
+            <div class="btnAnimate">
+                <img src="images/p3_again.png" id="again" alt="重新游戏" />
+                <img src="images/ranking.png" id="rank" alt="数钱" />
+                <img src="images/activity_rule.png" id="rule" alt="规则" />
+                <img src="images/prize.png" id="prize" alt="奖品" />
+                <img src="images/shiyong.png" id="state" alt="说明" />
+                <img src="images/p3_share_btn.png" id="share" alt="分享好友" />
+            </div>
+            <div class="messDiv">
+                <div style="display: none;"></div>
+                <div class="messTwo" style="display: none;">
+                    <img src="images/close.png" style="width:6%;position: absolute;left:80%;top:13%;" class="closeX" />
+                    <div class="ranking">
+                        <ul class="rankScore">
+                            <li>
+                            </li>
+                            <li>
+                            </li>
+                            <li>
+                            </li>
+                            <li>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="messThree" style="display: none;">
+                    <img src="images/close.png" style="width:6%;position: absolute;left:80%;top:13%;" class="closeX" />
+                    <div class="rule">
+                        <center>
+                            <h2>活动规则</h2></center>
+                        <p>1、每人有多次游戏机会，但成绩只能提交一次，且提交之后不能更改！
+                            <br> 2、提交成绩时要提供姓名及手机号码作为兑奖凭证，因用户本人未在规定时间内提供正确的手机号码造成的奖品损失，由用户个人承担。
+                            <br> 3、活动时间为2016年5月11日-5月19日24:00，活动结束后将在“雾灵山庄”微信公布中奖名单。
+                            <br> 4、获奖规则：系统将根据大家提交的成绩，按照由多到少的规则进行排行，排名第1的网友将获得一等奖，排名第2-第21位的网友将分获二等奖，以此类推。
+                            <br> 5、奖品的发放：活动结束后，将由工作人员与您取得联系，并将相应的卡券编号发送到您提供的手机号码上。
+                        </p>
+                    </div>
+                </div>
+                <div class="messFour" style="display: none;">
+                    <img src="images/close.png" style="width:6%;position: absolute;left:80%;top:13%;" class="closeX" />
+                    <div class="prize">
+                        <center>
+                            <h2>活动奖品</h2></center>
+                        <p>一等奖
+                            <mark>1人</mark>价值1488元7号楼1晚豪华标间免费房券1张，并可享康体项目3折优惠；</p>
+                        <p>二等奖
+                            <mark>20人</mark>：100元订房代金券每人1张，并可享康体项目4折优惠；</p>
+                        <p>三等奖
+                            <mark>50人</mark>：50元订房代金券每人1张，并可享康体项目5折优惠。</p>
+                        <p>奖品的有效期：2016年5月20日至6月15日（周五、周六及法定节假日不可用）</p>
+                    </div>
+                </div>
+                <div class="messFive" style="display: none;">
+                    <img src="images/close.png" style="width:6%;position: absolute;left:80%;top:13%;" class="closeX" />
+                    <div class="state">
+                        <center>
+                            <h2>奖券使用说明</h2></center>
+                        <p>1、奖品的使用：请务必至少提前一周致电010-81027788或81027799进行预约，并于入住时向前台服务人员出示您手机上收到的卡券编号即可使用（需同时验证获奖人姓名与手机号码）。
+                            <br> 2、代金券仅适用于线下门市价入住客房消费使用，不适用于通过携程或微信等其他线上渠道预定使用。
+                            <br> 3、免费房安排的房间将视当时酒店排房情况而定，如您所预约的时段预订已满，将与您协商调整入住时间。
+                            <br> 4、免费房券及代金券不得用于除订房外其他产品消费，不得与酒店其他优惠折扣或礼券同时使用，且不予退换、兑换现金或找赎。
+                            <br> 5、对于恶意刷奖者和作弊者，主办方有权取消其兑奖资格。
+                        </p>
+                    </div>
+                </div>
+                <div class="messSix" style="display: none;">
+                    <img src="images/p3_share.png" id="fenx" alt="分享图片" />
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/touch-0.2.14.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+
+</html>
